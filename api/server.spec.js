@@ -69,20 +69,3 @@ describe("server", () => {
     });
   });
 });
-
-describe("delete /ogs", () => {
-  it.skip("return deleted 200", () => {
-    return request(server)
-      .delete("/ogs/")
-      .then(res => {
-        expect(res.status).toBe(200);
-      });
-  });
-  it("return 2 after deleting", () => {
-    return request(server)
-      .delete("/ogs/1")
-      .then(res => {
-        expect(res.body).toBe(2);
-      });
-  });
-});
