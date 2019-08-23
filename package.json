@@ -1,28 +1,34 @@
 {
-  "name": "node-server-testing-guided",
+  "name": "node-server-testing",
   "version": "1.0.0",
-  "description": "Starter Code for Node Server Testing Module",
-  "main": "index.js",
+  "description": "Node Server Testing Challenge",
+  "main": "server.js",
   "scripts": {
     "server": "nodemon index.js",
-    "test": "cross-env DB_ENV=testing jest --watch",
-    "start": "node index.js"
+    "test": "jest --watch"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LambdaSchool/node-server-testing.git"
   },
   "keywords": [],
-  "author": "Lambda School",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LambdaSchool/node-server-testing/issues"
+  },
+  "homepage": "https://github.com/LambdaSchool/node-server-testing#readme",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2"
+  },
   "dependencies": {
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "knex": "^0.19.2",
     "sqlite3": "^4.1.0"
-  },
-  "devDependencies": {
-    "cross-env": "^5.2.0",
-    "jest": "^24.9.0",
-    "nodemon": "^1.19.1",
-    "supertest": "^4.0.2"
-  },
-  "jest": {
-    "testEnvironment": "node"
   }
 }
